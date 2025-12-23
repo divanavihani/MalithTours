@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle, Facebook, Send, QrCode, User, Calendar, Users, Plane, Car, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Facebook, Send, QrCode, User, Calendar, Plane, Car, Clock } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -105,24 +105,6 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
   const formVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: (i) => ({
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, delay: i * 0.15, ease: [0.4, 0, 0.2, 1] },
-    }),
-  };
-
-  const socialCardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, delay: i * 0.15, ease: [0.4, 0, 0.2, 1] },
-    }),
   };
 
   const ctaVariants = {

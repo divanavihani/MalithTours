@@ -105,11 +105,6 @@ const Reviews = () => {
     }),
   };
 
-  const imageVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.4, ease: "easeOut" } },
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50">
       {/* Cover Photo Section with Navigation Bar */}

@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import RecentReviews from "../components/RecentReviews";
-import Footer from "../components/Footer";
 import {
   FaPhone,
   FaWhatsapp,
