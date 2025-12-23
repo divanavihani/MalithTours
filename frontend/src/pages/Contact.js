@@ -140,7 +140,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50">
       {/* Hero Section */}
       <motion.div
-        className="relative w-full h-[500px] bg-cover bg-center -mt-20 pt-20"
+        className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] bg-cover bg-center -mt-16 sm:-mt-18 md:-mt-20 pt-16 sm:pt-18 md:pt-20"
         style={{
           backgroundImage: "url('https://tgmresearch.com/templates/yootheme/cache/92/tourists-man-woman-couple-traveling-920c8d02.jpeg')",
           backgroundPosition: "center",
@@ -156,20 +156,20 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
         {/* Hero Content */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center text-white px-4 sm:px-6 max-w-5xl">
-            <motion.div className="mb-4" custom={0} variants={textVariants}>
-              <div className="inline-block p-2 bg-white/10 rounded-full backdrop-blur-md">
-                <MessageCircle className="h-10 w-10 text-white" />
+            <motion.div className="mb-3 sm:mb-4" custom={0} variants={textVariants}>
+              <div className="inline-block p-1.5 sm:p-2 bg-white/10 rounded-full backdrop-blur-md">
+                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-white" />
               </div>
             </motion.div>
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent font-serif"
+              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent font-serif"
               custom={0}
               variants={textVariants}
             >
               Connect With Us
             </motion.h1>
             <motion.p
-              className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-light"
+              className="text-sm xs:text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light"
               custom={1}
               variants={textVariants}
             >
@@ -180,13 +180,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
         
         {/* Bottom Wave */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-12 text-white" fill="currentColor" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <svg className="w-full h-8 sm:h-10 md:h-12 text-white" fill="currentColor" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
           </svg>
         </div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
         {/* QR Code, Gallery, and Map Section - Above Form */}
         <motion.div
           className="mb-16"
@@ -196,16 +196,16 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
           variants={headerVariants}
         >
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <motion.h2
-              className="text-3xl font-bold text-gray-900 mb-4 font-serif"
+              className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif"
               custom={0}
               variants={textVariants}
             >
               Connect & Explore
             </motion.h2>
             <motion.p
-              className="text-lg text-gray-600 max-w-2xl mx-auto"
+              className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4"
               custom={1}
               variants={textVariants}
             >
@@ -214,53 +214,53 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
           </div>
 
           {/* Three Column Layout: QR Code, Gallery, Map */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
             {/* QR Code Section */}
             <motion.div
-              className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-100"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 md:p-8 text-center border border-gray-100"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={qrCodeVariants}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <QrCode className="h-8 w-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6">
+                <QrCode className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3 font-serif">Quick Connect</h3>
-              <p className="text-sm text-gray-600 mb-6">Scan to access our contact details instantly</p>
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 font-serif">Quick Connect</h3>
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-5 md:mb-6">Scan to access our contact details instantly</p>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border-2 border-gray-200">
                 <img
                   src="/images/qr.jpg"
                   alt="Contact QR Code"
-                  className="w-40 h-40 mx-auto object-contain rounded-lg"
+                  className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 mx-auto object-contain rounded-lg"
                   onError={(e) => {
                     e.target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNGM0Y0RjYiLz48cmVjdCB4PSIyNCIgeT0iMjQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0iIzM3NDE1MSIvPjxyZWN0IHg9IjEyMCIgeT0iMjQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0iIzM3NDE1MSIvPjxyZWN0IHg9IjI0IiB5PSIxMjAiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0iIzM3NDE1MSIvPjx0ZXh0IHg9Ijk2IiB5PSIxMDQiIGZpbGw9IiMzNzQxNTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UVI8L3RleHQ+PC9zdmc+";
                   }}
                 />
               </div>
-              <div className="mt-4 text-xs text-gray-500">
+              <div className="mt-3 sm:mt-4 text-[10px] sm:text-xs text-gray-500">
                 Point your camera at the QR code
               </div>
             </motion.div>
 
             {/* Gallery Section */}
             <motion.div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 md:p-8 border border-gray-100"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={galleryVariants}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6">
+                <svg className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3 text-center font-serif">Photo Gallery</h3>
-              <p className="text-sm text-gray-600 mb-6 text-center">Beautiful moments from our tours</p>
-              <div className="grid grid-cols-2 gap-3">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 text-center font-serif">Photo Gallery</h3>
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-5 md:mb-6 text-center">Beautiful moments from our tours</p>
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {[
                   { src: "/images/T1.jpeg", title: "Paradise Beach" },
                   { src: "/images/T2.jpeg", title: "Mountain Vista" },
@@ -304,22 +304,22 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
 
             {/* Map Section */}
             <motion.div
-              className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-100 md:col-span-2 lg:col-span-1"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={headerVariants}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <div className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="h-8 w-8 text-white" />
+              <div className="p-4 sm:p-6 md:p-8 text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6">
+                  <MapPin className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3 font-serif">Find Us</h3>
-                <p className="text-sm text-gray-600 mb-6">Located in beautiful Mirissa</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 font-serif">Find Us</h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-5 md:mb-6">Located in beautiful Mirissa</p>
               </div>
               
-              <div className="relative h-64 bg-gray-100">
+              <div className="relative h-48 sm:h-56 md:h-64 bg-gray-100">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.0234567890123!2d80.45678901234567!3d5.945678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae138b073c5c5c5%3A0x1a2b3c4d5e6f7g8h!2sMirissa%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                   width="100%"
@@ -343,54 +343,54 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
         </motion.div>
 
         {/* Contact Form and Info Section */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-10 sm:mb-12 md:mb-16">
           {/* Enhanced Contact Form - Takes 2/3 width */}
           <motion.div
-            className="lg:col-span-2 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20 rounded-2xl shadow-2xl p-10 border border-gray-100"
+            className="lg:col-span-2 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10 border border-gray-100"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={formVariants}
           >
-            <motion.div className="text-center mb-10">
+            <motion.div className="text-center mb-6 sm:mb-8 md:mb-10">
               <motion.h2
-                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4 font-serif"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3 sm:mb-4 font-serif"
                 custom={0}
                 variants={textVariants}
               >
                 Plan Your Sri Lankan Adventure
               </motion.h2>
               <motion.p
-                className="text-gray-600 text-lg mb-6"
+                className="text-gray-600 text-sm sm:text-base md:text-lg mb-4 sm:mb-6"
                 custom={1}
                 variants={textVariants}
               >
                 Fill out this form and we'll create your perfect itinerary
               </motion.p>
               <motion.div
-                className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full"
+                className="w-24 sm:w-28 md:w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full"
                 initial={{ width: 0 }}
-                animate={{ width: 128 }}
+                animate={{ width: "100%" }}
                 transition={{ duration: 1, delay: 0.5 }}
               />
             </motion.div>
             
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
               {/* Personal Information */}
               <motion.div 
-                className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-100"
+                className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 shadow-sm border border-blue-100"
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                    <User className="h-5 w-5 text-white" />
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6 flex items-center">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                    <User className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                   Personal Information
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
                   <motion.div custom={1} variants={textVariants}>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
                       Full Name *
                     </label>
                     <input
@@ -400,13 +400,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm"
+                      className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm text-sm sm:text-base"
                       placeholder="Your full name"
                     />
                   </motion.div>
                   
                   <motion.div custom={2} variants={textVariants}>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
                       Email Address *
                     </label>
                     <input
@@ -416,15 +416,15 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm"
+                      className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm text-sm sm:text-base"
                       placeholder="your.email@example.com"
                     />
                   </motion.div>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mt-4 sm:mt-5 md:mt-6">
                   <motion.div custom={3} variants={textVariants}>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
                       Phone Number
                     </label>
                     <input
@@ -433,13 +433,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm"
+                      className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm text-sm sm:text-base"
                       placeholder="+1 (555) 123-4567"
                     />
                   </motion.div>
                   
                   <motion.div custom={4} variants={textVariants}>
-                    <label htmlFor="from" className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label htmlFor="from" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
                       Traveling From
                     </label>
                     <input
@@ -448,13 +448,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="from"
                       value={formData.from}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm"
+                      className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm text-sm sm:text-base"
                       placeholder="Country/City"
                     />
                   </motion.div>
                   
                   <motion.div custom={5} variants={textVariants}>
-                    <label htmlFor="to" className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label htmlFor="to" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
                       Arriving To
                     </label>
                     <select
@@ -462,7 +462,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="to"
                       value={formData.to}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 shadow-sm"
+                      className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-gray-800 shadow-sm text-sm sm:text-base"
                     >
                       <option value="">Select Airport</option>
                       <option value="Colombo (CMB)">Colombo (CMB)</option>
@@ -473,14 +473,14 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
               </motion.div>
 
               {/* Travel Details */}
-              <div className="bg-green-50 rounded-lg p-4 mb-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                  <MapPin className="h-5 w-5 mr-2 text-green-600" />
+              <div className="bg-green-50 rounded-lg p-3 sm:p-4 mb-4 sm:mb-5 md:mb-6">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4 flex items-center">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 text-green-600" />
                   Travel Route Planning
                 </h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                   <motion.div custom={6} variants={textVariants}>
-                    <label htmlFor="fromDestination" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="fromDestination" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Starting Destination
                     </label>
                     <select
@@ -488,7 +488,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="fromDestination"
                       value={formData.fromDestination}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     >
                       <option value="">Select starting point</option>
                       <option value="Colombo Airport (CMB)">Colombo Airport (CMB)</option>
@@ -511,7 +511,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                   </motion.div>
                   
                   <motion.div custom={7} variants={textVariants}>
-                    <label htmlFor="toDestination" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="toDestination" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Ending Destination
                     </label>
                     <select
@@ -519,7 +519,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="toDestination"
                       value={formData.toDestination}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     >
                       <option value="">Select ending point</option>
                       <option value="Colombo Airport (CMB)">Colombo Airport (CMB)</option>
@@ -543,9 +543,9 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                   </motion.div>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
                   <motion.div custom={8} variants={textVariants}>
-                    <label htmlFor="travelers" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="travelers" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Number of Travelers
                     </label>
                     <select
@@ -553,7 +553,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="travelers"
                       value={formData.travelers}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     >
                       <option value="">Select number</option>
                       <option value="1">1 Person</option>
@@ -566,8 +566,8 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                   </motion.div>
                   
                   <motion.div custom={9} variants={textVariants}>
-                    <label htmlFor="travelDate" className="block text-sm font-medium text-gray-700 mb-2">
-                      <Calendar className="inline h-4 w-4 mr-1" />
+                    <label htmlFor="travelDate" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
+                      <Calendar className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                       Arrival Date
                     </label>
                     <input
@@ -576,13 +576,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="travelDate"
                       value={formData.travelDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     />
                   </motion.div>
                   
                   <motion.div custom={10} variants={textVariants}>
-                    <label htmlFor="returnDate" className="block text-sm font-medium text-gray-700 mb-2">
-                      <Calendar className="inline h-4 w-4 mr-1" />
+                    <label htmlFor="returnDate" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
+                      <Calendar className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                       Departure Date
                     </label>
                     <input
@@ -591,34 +591,34 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                       name="returnDate"
                       value={formData.returnDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     />
                   </motion.div>
                 </div>
                 
-                <div className="mt-4 text-sm text-gray-600 bg-white/60 p-3 rounded-lg">
-                  <MapPin className="inline h-4 w-4 mr-1" />
+                <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 bg-white/60 p-2 sm:p-3 rounded-lg">
+                  <MapPin className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                   <strong>Route Planning:</strong> Our team will create a custom itinerary connecting your 
                   chosen destinations with the most scenic and efficient routes, including must-see attractions along the way.
                 </div>
               </div>
 
               {/* Airport Pickup Service */}
-              <div className="bg-purple-50 rounded-lg p-4 mb-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                  <Plane className="h-5 w-5 mr-2 text-purple-600" />
+              <div className="bg-purple-50 rounded-lg p-3 sm:p-4 mb-4 sm:mb-5 md:mb-6">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4 flex items-center">
+                  <Plane className="h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 text-purple-600" />
                   Airport Pickup Service
                 </h3>
                 <motion.div custom={10} variants={textVariants}>
-                  <label className="flex items-center space-x-3 cursor-pointer">
+                  <label className="flex items-center space-x-2 sm:space-x-3 cursor-pointer">
                     <input
                       type="checkbox"
                       name="airportPickup"
                       checked={formData.airportPickup}
                       onChange={handleChange}
-                      className="w-5 h-5 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                     />
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-xs sm:text-sm font-medium text-gray-700">
                       Yes, I need airport pickup service
                     </span>
                   </label>
@@ -626,13 +626,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                 
                 {formData.airportPickup && (
                   <motion.div 
-                    className="mt-4 grid md:grid-cols-3 gap-4"
+                    className="mt-3 sm:mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     transition={{ duration: 0.3 }}
                   >
                     <div>
-                      <label htmlFor="pickupDetails.flightNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="pickupDetails.flightNumber" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                         Flight Number
                       </label>
                       <input
@@ -641,14 +641,14 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                         name="pickupDetails.flightNumber"
                         value={formData.pickupDetails.flightNumber}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-sm sm:text-base"
                         placeholder="e.g., UL301"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="pickupDetails.arrivalTime" className="block text-sm font-medium text-gray-700 mb-2">
-                        <Clock className="inline h-4 w-4 mr-1" />
+                      <label htmlFor="pickupDetails.arrivalTime" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
+                        <Clock className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         Arrival Time
                       </label>
                       <input
@@ -657,13 +657,13 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                         name="pickupDetails.arrivalTime"
                         value={formData.pickupDetails.arrivalTime}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-sm sm:text-base"
                       />
                     </div>
                     
-                    <div>
-                      <label htmlFor="pickupDetails.airportName" className="block text-sm font-medium text-gray-700 mb-2">
-                        <Plane className="inline h-4 w-4 mr-1" />
+                    <div className="sm:col-span-2 md:col-span-1">
+                      <label htmlFor="pickupDetails.airportName" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
+                        <Plane className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         Airport
                       </label>
                       <select
@@ -671,7 +671,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                         name="pickupDetails.airportName"
                         value={formData.pickupDetails.airportName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-sm sm:text-base"
                       >
                         <option value="">Select Airport</option>
                         <option value="Bandaranaike International Airport (CMB)">Bandaranaike International (CMB)</option>
@@ -681,8 +681,8 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                   </motion.div>
                 )}
                 
-                <div className="mt-3 text-sm text-gray-600 bg-white/60 p-3 rounded-lg">
-                  <Car className="inline h-4 w-4 mr-1" />
+                <div className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 bg-white/60 p-2 sm:p-3 rounded-lg">
+                  <Car className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                   <strong>Airport Pickup Service includes:</strong> Professional driver, comfortable vehicle, 
                   flight tracking, complimentary water bottles, and assistance with luggage.
                 </div>
@@ -694,23 +694,23 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
 
               {/* Additional Message */}
               <motion.div 
-                className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-6 shadow-sm border border-orange-100"
+                className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 shadow-sm border border-orange-100"
                 custom={13} 
                 variants={textVariants}
               >
-                <label htmlFor="message" className="block text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
-                    <MessageCircle className="h-5 w-5 text-white" />
+                <label htmlFor="message" className="block text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4 flex items-center">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                    <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                   Additional Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm resize-none"
+                  className="w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200 text-gray-800 placeholder-gray-400 shadow-sm resize-none text-sm sm:text-base"
                   placeholder="Tell us about your dream Sri Lankan adventure, special interests, dietary requirements, or any other preferences..."
                 ></textarea>
               </motion.div>
@@ -724,10 +724,10 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                 custom={14}
                 variants={textVariants}
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
-                <div className="relative bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 text-white px-8 py-6 rounded-xl font-bold text-lg shadow-2xl transform transition-all duration-300 group-hover:shadow-3xl overflow-hidden">
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-xl sm:rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                <div className="relative bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 text-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base md:text-lg shadow-2xl transform transition-all duration-300 group-hover:shadow-3xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
-                  <div className="relative z-10 flex items-center justify-center space-x-4">
+                  <div className="relative z-10 flex items-center justify-center space-x-2 sm:space-x-3 md:space-x-4">
                     <motion.div
                       animate={{
                         rotate: [0, 360],
@@ -739,9 +739,9 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                         ease: "easeInOut"
                       }}
                     >
-                      <MessageCircle className="h-7 w-7" />
+                      <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
                     </motion.div>
-                    <span className="text-xl tracking-wider font-extrabold">Send Inquiry via WhatsApp</span>
+                    <span className="text-sm sm:text-base md:text-lg lg:text-xl tracking-wide sm:tracking-wider font-bold sm:font-extrabold">Send Inquiry via WhatsApp</span>
                     <motion.div
                       animate={{
                         x: [0, 5, 0],
@@ -752,6 +752,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
                         repeat: Infinity,
                         ease: "easeInOut"
                       }}
+                      className="hidden sm:block"
                     >
                       ✨
                     </motion.div>
@@ -760,12 +761,12 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
               </motion.button>
               
               <motion.div 
-                className="text-center mt-6 bg-gray-50 p-6 rounded-xl border border-gray-200"
+                className="text-center mt-4 sm:mt-5 md:mt-6 bg-gray-50 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-gray-200"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   <span className="font-semibold text-gray-800">🚀 Quick Response:</span> By submitting this form, you'll be redirected to WhatsApp with your inquiry pre-filled. 
                   Our expert team will respond within <span className="font-semibold text-green-600">2-4 hours</span> during business hours with a customized itinerary and pricing.
                 </p>
@@ -775,39 +776,39 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
 
           {/* Contact Information Sidebar */}
           <motion.div
-            className="lg:col-span-1 space-y-6"
+            className="lg:col-span-1 space-y-4 sm:space-y-5 md:space-y-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={headerVariants}
           >
             {/* Contact Details */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 md:p-8 border border-gray-100">
               <motion.h2
-                className="text-2xl font-bold text-gray-800 mb-6 font-serif text-center"
+                className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6 font-serif text-center"
                 custom={0}
                 variants={textVariants}
               >
                 Contact Details
               </motion.h2>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-5 md:space-y-6">
                 {[
-                  { icon: <Phone className="h-6 w-6 text-indigo-600" />, label: "Phone", value: "+94 0771351993", link: "tel:+940771351993" },
-                  { icon: <Mail className="h-6 w-6 text-indigo-600" />, label: "Email", value: "malithchamara1993@gmail.com", link: "mailto:malithchamara1993@gmail.com" },
-                  { icon: <MapPin className="h-6 w-6 text-indigo-600" />, label: "Address", value: "Colombo Rd, Mirissa, Sri Lanka", link: "https://goo.gl/maps/example" },
+                  { icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-600" />, label: "Phone", value: "+94 0771351993", link: "tel:+940771351993" },
+                  { icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-600" />, label: "Email", value: "malithchamara1993@gmail.com", link: "mailto:malithchamara1993@gmail.com" },
+                  { icon: <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-600" />, label: "Address", value: "Colombo Rd, Mirissa, Sri Lanka", link: "https://goo.gl/maps/example" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start group p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                    className="flex items-start group p-3 sm:p-4 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors"
                     custom={index + 1}
                     variants={textVariants}
                   >
-                    <div className="flex-shrink-0 mt-1 mr-4">{item.icon}</div>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800 mb-1">{item.label}</p>
+                    <div className="flex-shrink-0 mt-0.5 sm:mt-1 mr-3 sm:mr-4">{item.icon}</div>
+                    <div className="min-w-0">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-0.5 sm:mb-1">{item.label}</p>
                       <a 
                         href={item.link}
-                        className="text-sm text-gray-600 hover:text-indigo-600 transition-colors font-medium"
+                        className="text-xs sm:text-sm text-gray-600 hover:text-indigo-600 transition-colors font-medium break-all sm:break-normal"
                       >
                         {item.value}
                       </a>
@@ -818,32 +819,32 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
             </div>
 
             {/* Social Media */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 md:p-8 border border-gray-100">
               <motion.h3
-                className="text-2xl font-bold text-gray-800 mb-6 font-serif text-center"
+                className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6 font-serif text-center"
                 custom={0}
                 variants={textVariants}
               >
                 Follow Us
               </motion.h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {[
-                  { icon: <MessageCircle className="h-6 w-6 text-green-500" />, title: "WhatsApp", link: "https://wa.me/940771351993" },
-                  { icon: <Facebook className="h-6 w-6 text-blue-600" />, title: "Facebook", link: "https://www.facebook.com/share/1K6hLztSti/" },
-                  { icon: <Send className="h-6 w-6 text-blue-500" />, title: "Telegram", link: "https://telegram.org/dl" },
+                  { icon: <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-500" />, title: "WhatsApp", link: "https://wa.me/940771351993" },
+                  { icon: <Facebook className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />, title: "Facebook", link: "https://www.facebook.com/share/1K6hLztSti/" },
+                  { icon: <Send className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />, title: "Telegram", link: "https://telegram.org/dl" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center p-4 rounded-xl hover:bg-gray-50 transition-colors group border border-gray-100 hover:border-gray-200"
+                    className="flex items-center p-3 sm:p-4 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors group border border-gray-100 hover:border-gray-200"
                     custom={index + 1}
                     variants={textVariants}
                     whileHover={{ x: 5 }}
                   >
                     {social.icon}
-                    <span className="ml-4 text-base font-semibold text-gray-700 group-hover:text-gray-900">{social.title}</span>
+                    <span className="ml-3 sm:ml-4 text-sm sm:text-base font-semibold text-gray-700 group-hover:text-gray-900">{social.title}</span>
                   </motion.a>
                 ))}
               </div>
@@ -857,18 +858,18 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
 
         {/* Call to Action */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-10 md:mt-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={ctaVariants}
         >
           <motion.div
-            className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl shadow-lg p-6 sm:p-8"
+            className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 md:p-8"
             variants={ctaVariants}
           >
             <motion.h2
-              className="text-2xl sm:text-3xl font-semibold mb-3 font-serif"
+              className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-3 font-serif"
               custom={0}
               initial="hidden"
               animate="visible"
@@ -877,7 +878,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
               Start Your Adventure
             </motion.h2>
             <motion.p
-              className="text-sm sm:text-base mb-4"
+              className="text-xs sm:text-sm md:text-base mb-3 sm:mb-4"
               custom={1}
               initial="hidden"
               animate="visible"
@@ -889,7 +890,7 @@ Please get back to me with tour details, itinerary, and pricing. Thank you! 🙏
               href="https://wa.me/940771351993"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-indigo-600 font-medium py-2 px-6 rounded-lg"
+              className="inline-block bg-white text-indigo-600 font-medium py-1.5 sm:py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base"
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"

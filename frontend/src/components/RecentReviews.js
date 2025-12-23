@@ -96,7 +96,7 @@ const RecentReviews = () => {
 
   return (
     <motion.section
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+      className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -104,16 +104,16 @@ const RecentReviews = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="text-3xl sm:text-4xl font-serif font-bold text-center text-gray-800 mb-12 tracking-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-center text-gray-800 mb-8 sm:mb-10 md:mb-12 tracking-tight"
           variants={sectionVariants}
         >
           What Our Travelers Say
         </motion.h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {reviews.map((review, index) => (
             <motion.div
               key={review._id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 border border-gray-100"
+              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-4 sm:p-5 md:p-6 border border-gray-100"
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -122,31 +122,31 @@ const RecentReviews = () => {
               whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
             >
               <motion.div
-                className="relative mb-6 overflow-hidden rounded-lg"
+                className="relative mb-4 sm:mb-5 md:mb-6 overflow-hidden rounded-lg"
                 variants={imageVariants}
               >
                 <img
                   src={review.image}
                   alt={`${review.name}'s review`}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-36 sm:h-40 md:h-48 object-cover"
                   onError={(e) => (e.target.src = "/images/fallback.jpg")}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </motion.div>
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-3 sm:mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-5 w-5 text-yellow-400 fill-current"
+                    className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current"
                   />
                 ))}
               </div>
-              <p className="text-gray-600 mb-4 italic text-base leading-relaxed font-medium">
+              <p className="text-gray-600 mb-3 sm:mb-4 italic text-sm sm:text-base leading-relaxed font-medium line-clamp-4">
                 "{review.feedback}"
               </p>
               <div className="flex justify-between items-center">
-                <p className="font-semibold text-gray-800 text-lg">{review.name}</p>
-                <p className="text-xs text-gray-500">
+                <p className="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">{review.name}</p>
+                <p className="text-[10px] sm:text-xs text-gray-500">
                   {new Date(review.createdAt).toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
@@ -164,7 +164,7 @@ const RecentReviews = () => {
         }
         @media (max-width: 640px) {
           h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
       `}</style>

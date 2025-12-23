@@ -111,7 +111,7 @@ const Reviews = () => {
       >
         {/* Background Image */}
         <div
-          className="relative w-full h-[500px] bg-cover bg-center -mt-20 pt-20"
+          className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] bg-cover bg-center -mt-16 sm:-mt-18 md:-mt-20 pt-16 sm:pt-18 md:pt-20"
           style={{
             backgroundImage: "url('https://img.freepik.com/free-photo/lost-tourists-finding-way_23-2147643219.jpg?semt=ais_hybrid&w=740')",
             backgroundPosition: "center",
@@ -127,15 +127,15 @@ const Reviews = () => {
             variants={coverVariants}
           >
             <div className="text-center px-4 sm:px-6 max-w-5xl">
-              <motion.div className="mb-6" custom={0} variants={textVariants}>
-                <div className="inline-block p-3 bg-white/10 rounded-full backdrop-blur-md">
+              <motion.div className="mb-4 sm:mb-6" custom={0} variants={textVariants}>
+                <div className="inline-block p-2 sm:p-3 bg-white/10 rounded-full backdrop-blur-md">
                   
                    
                  
                 </div>
               </motion.div>
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white font-serif tracking-tight mb-6"
+                className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white font-serif tracking-tight mb-4 sm:mb-6"
                 custom={0}
                 variants={textVariants}
               >
@@ -144,7 +144,7 @@ const Reviews = () => {
                 </span>
               </motion.h1>
               <motion.p
-                className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed font-light mb-8"
+                className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed font-light mb-6 sm:mb-8"
                 custom={1}
                 variants={textVariants}
               >
@@ -156,7 +156,7 @@ const Reviews = () => {
 
               {/* Call to Action Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
                 custom={2}
                 variants={textVariants}
               >
@@ -166,36 +166,36 @@ const Reviews = () => {
 
               {/* Stats Section */}
               <motion.div
-                className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+                className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-2xl mx-auto"
                 custom={3}
                 variants={textVariants}
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">500+</div>
-                  <div className="text-white/80 text-sm">Happy Travelers</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">500+</div>
+                  <div className="text-white/80 text-[10px] xs:text-xs sm:text-sm">Happy Travelers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">4.9★</div>
-                  <div className="text-white/80 text-sm">Average Rating</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">4.9★</div>
+                  <div className="text-white/80 text-[10px] xs:text-xs sm:text-sm">Average Rating</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">50+</div>
-                  <div className="text-white/80 text-sm">Destinations</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
+                  <div className="text-white/80 text-[10px] xs:text-xs sm:text-sm">Destinations</div>
                 </div>
               </motion.div>
             </div>
           </motion.div>
 
           {/* Subtle Decorative Element */}
-          <div className="absolute bottom-0 left-0 right-0 h-12 z-10">
+          <div className="absolute bottom-0 left-0 right-0 h-8 sm:h-10 md:h-12 z-10">
             <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
             </svg>
           </div>
 
-          {/* Floating Elements for Visual Interest */}
+          {/* Floating Elements for Visual Interest - Hidden on mobile */}
           <motion.div
-            className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full opacity-60"
+            className="absolute top-20 left-10 w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rounded-full opacity-60 hidden sm:block"
             animate={{
               y: [0, -20, 0],
               scale: [1, 1.2, 1],
@@ -207,7 +207,7 @@ const Reviews = () => {
             }}
           />
           <motion.div
-            className="absolute top-32 right-16 w-6 h-6 bg-purple-400 rounded-full opacity-40"
+            className="absolute top-32 right-16 w-4 h-4 sm:w-6 sm:h-6 bg-purple-400 rounded-full opacity-40 hidden sm:block"
             animate={{
               y: [0, 15, 0],
               x: [0, 10, 0],
@@ -220,7 +220,7 @@ const Reviews = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-32 left-20 w-8 h-8 bg-yellow-400 rounded-full opacity-50"
+            className="absolute bottom-32 left-20 w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 rounded-full opacity-50 hidden sm:block"
             animate={{
               y: [0, -25, 0],
               rotate: [0, 180, 360],
@@ -235,7 +235,7 @@ const Reviews = () => {
       </motion.section>
 
       {/* Reviews Content Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative z-20">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Destinations Highlight */}
           <div className="mb-20 text-center relative">

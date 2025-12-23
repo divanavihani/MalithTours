@@ -311,7 +311,7 @@ const DestinationDetails = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <motion.div
-        className="relative h-80 sm:h-96 bg-gray-900 -mt-16 pt-16 z-10"
+        className="relative h-[60vh] min-h-[300px] sm:min-h-[350px] md:min-h-[400px] max-h-[500px] bg-gray-900 -mt-16 pt-16 z-10"
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
@@ -331,7 +331,7 @@ const DestinationDetails = () => {
         >
           <div className="text-center text-white px-4 max-w-4xl">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -339,7 +339,7 @@ const DestinationDetails = () => {
               {destination.name}
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-gray-200"
+              className="text-sm sm:text-base md:text-xl lg:text-2xl mb-4 sm:mb-6 md:mb-8 text-gray-200 px-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -347,18 +347,18 @@ const DestinationDetails = () => {
               {destination.description}
             </motion.p>
             <motion.div
-              className="flex items-center justify-center space-x-6 text-lg"
+              className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:space-x-6 text-xs sm:text-sm md:text-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="flex items-center bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-                <FaMapMarkerAlt className="mr-2" />
-                {destination.location}
+              <div className="flex items-center bg-black/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-sm">
+                <FaMapMarkerAlt className="mr-1.5 sm:mr-2 text-xs sm:text-sm md:text-base" />
+                <span className="text-xs sm:text-sm md:text-base">{destination.location}</span>
               </div>
-              <div className="flex items-center bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-                <FaStar className="mr-1 text-yellow-400" />
-                {destination.rating} ({destination.reviews} reviews)
+              <div className="flex items-center bg-black/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-sm">
+                <FaStar className="mr-1 text-yellow-400 text-xs sm:text-sm md:text-base" />
+                <span className="text-xs sm:text-sm md:text-base">{destination.rating} ({destination.reviews} reviews)</span>
               </div>
             </motion.div>
           </div>
@@ -366,35 +366,35 @@ const DestinationDetails = () => {
         
         {/* Scroll down indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="animate-bounce">
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-2 sm:h-3 bg-white rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
             </div>
           </div>
         </motion.div>
       </motion.div>
 
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8 relative z-20">
         <Link
           to="/"
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium bg-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
         >
-          <FaArrowLeft className="mr-2" />
+          <FaArrowLeft className="mr-1.5 sm:mr-2 text-sm sm:text-base" />
           Back to Home
         </Link>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-20">
-        <div className="grid lg:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20 relative z-20">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {/* Left Column - Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             {/* Description */}
             <motion.div
               variants={fadeInUp}
@@ -402,8 +402,8 @@ const DestinationDetails = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">About {destination.name}</h2>
-              <p className="text-gray-600 leading-relaxed text-lg">{destination.fullDescription}</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">About {destination.name}</h2>
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">{destination.fullDescription}</p>
             </motion.div>
 
             {/* Highlights */}
@@ -413,12 +413,12 @@ const DestinationDetails = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Top Attractions</h3>
-              <div className="grid md:grid-cols-2 gap-3">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Top Attractions</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
                 {destination.highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start">
-                    <FaHeart className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{highlight}</span>
+                    <FaHeart className="text-red-500 mt-0.5 sm:mt-1 mr-2 sm:mr-3 flex-shrink-0 text-sm sm:text-base" />
+                    <span className="text-gray-700 text-sm sm:text-base">{highlight}</span>
                   </div>
                 ))}
               </div>
@@ -431,12 +431,12 @@ const DestinationDetails = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Popular Activities</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Popular Activities</h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {destination.activities.map((activity, index) => (
                   <span
                     key={index}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                    className="bg-blue-100 text-blue-800 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium"
                   >
                     {activity}
                   </span>
@@ -451,14 +451,14 @@ const DestinationDetails = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Photo Gallery</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Photo Gallery</h3>
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
                 {destination.gallery.map((image, index) => (
                   <motion.img
                     key={index}
                     src={image}
                     alt={`${destination.name} view ${index + 1}`}
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                    className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
                     variants={fadeInUp}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
@@ -469,36 +469,36 @@ const DestinationDetails = () => {
           </div>
 
           {/* Right Column - Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Quick Info Card */}
             <motion.div
-              className="bg-white rounded-lg p-6 shadow-md"
+              className="bg-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Quick Info</h4>
-              <div className="space-y-4">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">Quick Info</h4>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
-                  <FaClock className="text-blue-600 mr-3" />
+                  <FaClock className="text-blue-600 mr-2 sm:mr-3 text-sm sm:text-base" />
                   <div>
-                    <span className="text-sm text-gray-500">Best Time to Visit</span>
-                    <p className="font-medium">{destination.bestTime}</p>
+                    <span className="text-xs sm:text-sm text-gray-500">Best Time to Visit</span>
+                    <p className="font-medium text-sm sm:text-base">{destination.bestTime}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <FaCamera className="text-blue-600 mr-3" />
+                  <FaCamera className="text-blue-600 mr-2 sm:mr-3 text-sm sm:text-base" />
                   <div>
-                    <span className="text-sm text-gray-500">Recommended Duration</span>
-                    <p className="font-medium">{destination.duration}</p>
+                    <span className="text-xs sm:text-sm text-gray-500">Recommended Duration</span>
+                    <p className="font-medium text-sm sm:text-base">{destination.duration}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <FaStar className="text-blue-600 mr-3" />
+                  <FaStar className="text-blue-600 mr-2 sm:mr-3 text-sm sm:text-base" />
                   <div>
-                    <span className="text-sm text-gray-500">Rating</span>
-                    <p className="font-medium">{destination.rating}/5 ({destination.reviews} reviews)</p>
+                    <span className="text-xs sm:text-sm text-gray-500">Rating</span>
+                    <p className="font-medium text-sm sm:text-base">{destination.rating}/5 ({destination.reviews} reviews)</p>
                   </div>
                 </div>
               </div>
@@ -506,53 +506,53 @@ const DestinationDetails = () => {
 
             {/* Booking Section */}
             <motion.div
-              className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6"
+              className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 sm:p-5 md:p-6"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Plan Your Visit</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Plan Your Visit</h3>
+              <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
                 Ready to explore {destination.name}? Contact us to plan your perfect Sri Lankan adventure.
               </p>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <motion.a
                   href={`https://wa.me/${whatsappNumber}?text=${message}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-green-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-green-700 transition-colors duration-200 w-full"
+                  className="flex items-center justify-center bg-green-600 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-green-700 transition-colors duration-200 w-full text-sm sm:text-base"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <FaWhatsapp className="mr-2" />
+                  <FaWhatsapp className="mr-1.5 sm:mr-2" />
                   Plan via WhatsApp
                 </motion.a>
                 <motion.a
                   href={telegramLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 w-full"
+                  className="flex items-center justify-center bg-blue-600 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 w-full text-sm sm:text-base"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <FaTelegramPlane className="mr-2" />
+                  <FaTelegramPlane className="mr-1.5 sm:mr-2" />
                   Plan via Telegram
                 </motion.a>
                 <motion.a
                   href={facebookLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-blue-800 text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors duration-200 w-full"
+                  className="flex items-center justify-center bg-blue-800 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-blue-900 transition-colors duration-200 w-full text-sm sm:text-base"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <FaFacebook className="mr-2" />
+                  <FaFacebook className="mr-1.5 sm:mr-2" />
                   Connect on Facebook
                 </motion.a>
                 <Link
                   to="/bookings"
-                  className="flex items-center justify-center bg-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors duration-200 w-full"
+                  className="flex items-center justify-center bg-purple-600 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-purple-700 transition-colors duration-200 w-full text-sm sm:text-base"
                 >
                   View Our Vehicle Fleet
                 </Link>
@@ -561,14 +561,14 @@ const DestinationDetails = () => {
 
             {/* Travel Tips */}
             <motion.div
-              className="bg-white rounded-lg p-6 shadow-md"
+              className="bg-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Travel Tips</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">Travel Tips</h4>
+              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                 <li>• Bring comfortable walking shoes</li>
                 <li>• Carry plenty of water and sunscreen</li>
                 <li>• Respect local customs and traditions</li>

@@ -165,7 +165,7 @@ const Home = () => {
       {/* Featured Destinations */}
       <section
         ref={destinationsRef}
-        className="py-24 bg-gradient-to-b from-gray-50 to-white"
+        className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
@@ -173,7 +173,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6 tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-900 mb-4 sm:mb-6 tracking-tight"
           >
             Discover Sri Lanka
           </motion.h2>
@@ -182,13 +182,13 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center text-gray-600 mb-16 max-w-3xl mx-auto text-lg leading-relaxed"
+            className="text-center text-gray-600 mb-8 sm:mb-12 md:mb-16 max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed px-4"
           >
             Embark on a journey through the pearl of the Indian Ocean, where
             ancient heritage meets breathtaking landscapes.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {destinations.map((destination, index) => (
               <motion.div
                 key={destination.name}
@@ -197,31 +197,31 @@ const Home = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={cardVariants}
-                className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                className="relative group rounded-xl sm:rounded-2xl overflow-hidden shadow-md sm:shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-500 bg-white"
               >
                 <motion.img
                   src={destination.image}
                   alt={destination.name}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-48 xs:h-56 sm:h-64 md:h-72 lg:h-80 object-cover"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.7, ease: "easeOut" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent opacity-80 group-hover:opacity-85 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-5 lg:p-6">
                   <motion.h3
-                    className="text-2xl font-bold text-white mb-2 drop-shadow-md"
+                    className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2 drop-shadow-md"
                     whileHover={{ color: "#93c5fd" }}
                     transition={{ duration: 0.2 }}
                   >
                     {destination.name}
                   </motion.h3>
                   <motion.p
-                    className="text-gray-100 text-sm font-medium drop-shadow-md"
+                    className="text-gray-100 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2 sm:line-clamp-3"
                     whileHover={{ color: "#ffffff" }}
                     transition={{ duration: 0.2 }}
                   >
-                    {destination.description.length > 120
-                      ? destination.description.slice(0, 120) + "..."
+                    {destination.description.length > 100
+                      ? destination.description.slice(0, 100) + "..."
                       : destination.description}
                   </motion.p>
                   <Link
@@ -270,7 +270,7 @@ const Home = () => {
 
       {/* CTA Section with T5 Image Background */}
       <div 
-        className="relative w-full h-[500px] bg-cover bg-center overflow-hidden"
+        className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage: "url('/images/T5.jpg')",
         }}
@@ -281,18 +281,18 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center px-4"
+            className="text-center px-4 sm:px-6 md:px-8"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-white drop-shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight text-white drop-shadow-lg">
               Begin Your Sri Lankan Adventure
             </h2>
-            <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed text-gray-100 font-light drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed text-gray-100 font-light drop-shadow-md">
               Join thousands of travelers and create unforgettable memories with
               Malith Tours.
             </p>
             <motion.a
               href="/bookings"
-              className="inline-block bg-white text-blue-700 font-semibold py-3 px-6 rounded-full shadow-md"
+              className="inline-block bg-white text-blue-700 font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-full shadow-md text-sm sm:text-base"
               whileHover={{
                 scale: 1.05,
                 backgroundColor: "#dbeafe",
@@ -310,20 +310,20 @@ const Home = () => {
 
       {/* Contact Us Button (Fixed on Right Side) */}
       <motion.div
-        className="fixed right-6 top-3/4 transform -translate-y-1/2 z-50"
+        className="fixed right-3 sm:right-4 md:right-6 top-3/4 transform -translate-y-1/2 z-50"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <motion.button
           onClick={handleMainContactClick}
-          className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-teal-600 border border-gray-200 shadow-md hover:bg-teal-50 hover:border-teal-300 transition-all duration-200"
+          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-teal-600 border border-gray-200 shadow-md hover:bg-teal-50 hover:border-teal-300 transition-all duration-200"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
           aria-label="Contact Us"
         >
-          <FaPhone size={20} />
+          <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5" />
         </motion.button>
       </motion.div>
 
@@ -331,26 +331,26 @@ const Home = () => {
       <AnimatePresence>
         {isMainPopupOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-3 sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="w-full max-w-md bg-white rounded-xl shadow-lg p-6"
+              className="w-full max-w-sm sm:max-w-md bg-white rounded-xl shadow-lg p-4 sm:p-6 max-h-[90vh] overflow-y-auto"
               variants={popupVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
             >
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-serif font-semibold text-gray-800 tracking-tight">
+              <div className="flex justify-between items-center mb-4 sm:mb-6">
+                <h2 className="text-lg sm:text-xl font-serif font-semibold text-gray-800 tracking-tight">
                   Contact Us
                 </h2>
                 <motion.button
                   onClick={handleCloseMainPopup}
-                  className="text-gray-500 text-2xl font-semibold hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-full"
+                  className="text-gray-500 text-2xl font-semibold hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-full w-8 h-8 flex items-center justify-center"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Close popup"
@@ -358,22 +358,22 @@ const Home = () => {
                   ×
                 </motion.button>
               </div>
-              <div className="flex flex-col space-y-6">
+              <div className="flex flex-col space-y-4 sm:space-y-6">
                 {Object.values(contactDetails).map((contact, index) => (
                   <motion.div
                     key={contact.title}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex flex-col space-y-3"
+                    className="flex flex-col space-y-2 sm:space-y-3"
                   >
                     <div className="flex items-center">
                       {contact.icon}
-                      <h3 className="text-base font-serif font-semibold text-gray-800 ml-2.5">
+                      <h3 className="text-sm sm:text-base font-serif font-semibold text-gray-800 ml-2 sm:ml-2.5">
                         {contact.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-xs sm:text-sm">
                       {contact.title === "Facebook"
                         ? `Page: ${contact.page}`
                         : contact.title === "Telegram"
@@ -384,7 +384,7 @@ const Home = () => {
                       href={contact.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block bg-white border border-teal-500 text-teal-600 font-medium py-2 px-4 rounded-lg hover:bg-teal-50 hover:border-teal-600 transition-colors duration-200 text-sm"
+                      className="inline-block bg-white border border-teal-500 text-teal-600 font-medium py-1.5 sm:py-2 px-3 sm:px-4 rounded-lg hover:bg-teal-50 hover:border-teal-600 transition-colors duration-200 text-xs sm:text-sm text-center"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
                       transition={{ duration: 0.2 }}

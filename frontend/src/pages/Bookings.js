@@ -124,7 +124,7 @@ const Bookings = () => {
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50">
 			<motion.div
-				className="relative w-full h-[500px] bg-cover bg-center -mt-20 pt-20"
+				className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] bg-cover bg-center -mt-16 sm:-mt-18 md:-mt-20 pt-16 sm:pt-18 md:pt-20"
 				style={{
 					backgroundImage:
 						"url('https://images.squarespace-cdn.com/content/v1/5a4188e76f4ca304bb0e99ab/1556796678804-DZMJOWHD9D8YKI4A5FRQ/sri-lanka-things-to-do-38.jpg')",
@@ -135,11 +135,11 @@ const Bookings = () => {
 			>
 				<div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent flex items-center justify-center z-10">
 					<motion.div
-						className="text-center px-6 md:px-12"
+						className="text-center px-4 sm:px-6 md:px-12"
 						variants={coverVariants}
 					>
 						<motion.h1
-							className="text-5xl md:text-7xl font-serif font-extrabold text-white mb-6 drop-shadow-2xl tracking-tight"
+							className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-extrabold text-white mb-4 sm:mb-6 drop-shadow-2xl tracking-tight"
 							custom={0}
 							initial="hidden"
 							animate="visible"
@@ -148,7 +148,7 @@ const Bookings = () => {
 							Journey in Elegance
 						</motion.h1>
 						<motion.p
-							className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-light"
+							className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-light"
 							custom={1}
 							initial="hidden"
 							animate="visible"
@@ -161,10 +161,10 @@ const Bookings = () => {
 				</div>
 			</motion.div>
 
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
-				<div className="text-center mb-16">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 relative z-20">
+				<div className="text-center mb-8 sm:mb-12 md:mb-16">
 					<motion.h2
-						className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6 tracking-tight"
+						className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-800 mb-4 sm:mb-6 tracking-tight"
 						custom={0}
 						initial="hidden"
 						whileInView="visible"
@@ -174,7 +174,7 @@ const Bookings = () => {
 						Our Premium Fleet
 					</motion.h2>
 					<motion.p
-						className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-light"
+						className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-light"
 						custom={1}
 						initial="hidden"
 						whileInView="visible"
@@ -186,7 +186,7 @@ const Bookings = () => {
 					</motion.p>
 				</div>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 					{vehicles.map((vehicle, index) => (
 						<motion.div
 							key={vehicle.id}

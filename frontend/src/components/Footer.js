@@ -30,10 +30,10 @@ const Footer = () => {
       viewport={{ once: true }}
       variants={footerVariants}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Logo and Company Info */}
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <motion.div
               className="flex items-center mb-3"
               whileHover="hover"
@@ -42,16 +42,16 @@ const Footer = () => {
               <img
                 src="/images/logo.png"
                 alt="Malith Tours Logo"
-                className="h-10 w-10 mr-3 drop-shadow-lg"
+                className="h-8 w-8 sm:h-10 sm:w-10 mr-2 sm:mr-3 drop-shadow-lg"
               />
               <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                   Malith Tours
                 </h3>
-                <p className="text-gray-400 text-xs">Your Gateway to Sri Lankan Adventures</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs">Your Gateway to Sri Lankan Adventures</p>
               </div>
             </motion.div>
-            <p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-md">
+            <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 max-w-md">
               Discover Sri Lanka with our premium travel services. From ancient temples to pristine beaches.
             </p>
             
@@ -72,7 +72,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, y: -1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <social.icon size={18} />
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.a>
               ))}
             </div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-3 text-blue-400">Quick Links</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-blue-400">Quick Links</h4>
             <ul className="space-y-1">
               {[
                 { name: "Home", path: "/" },
@@ -92,7 +92,7 @@ const Footer = () => {
                 <motion.li key={index} whileHover={{ x: 3 }} transition={{ duration: 0.2 }}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center text-sm"
+                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center text-xs sm:text-sm"
                   >
                     <span className="mr-1 text-xs">→</span>
                     {link.name}
@@ -104,15 +104,15 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-3 text-blue-400">Contact Info</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-blue-400">Contact Info</h4>
             <div className="space-y-2">
               <motion.div
                 className="flex items-start"
                 whileHover={{ x: 3 }}
                 transition={{ duration: 0.2 }}
               >
-                <FaMapMarkerAlt className="text-blue-400 mt-1 mr-2 flex-shrink-0 text-sm" />
-                <p className="text-gray-300 text-sm">
+                <FaMapMarkerAlt className="text-blue-400 mt-1 mr-2 flex-shrink-0 text-xs sm:text-sm" />
+                <p className="text-gray-300 text-xs sm:text-sm">
                   Colombo Road, Mirissa<br />
                   Sri Lanka
                 </p>
@@ -123,8 +123,8 @@ const Footer = () => {
                 whileHover={{ x: 3 }}
                 transition={{ duration: 0.2 }}
               >
-                <FaPhone className="text-blue-400 mr-2 text-sm" />
-                <a href="tel:+94771351993" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
+                <FaPhone className="text-blue-400 mr-2 text-xs sm:text-sm" />
+                <a href="tel:+94771351993" className="text-gray-300 hover:text-white transition-colors duration-300 text-xs sm:text-sm">
                   +94 077 135 1993
                 </a>
               </motion.div>
@@ -134,8 +134,8 @@ const Footer = () => {
                 whileHover={{ x: 3 }}
                 transition={{ duration: 0.2 }}
               >
-                <FaEnvelope className="text-blue-400 mr-2 text-sm" />
-                <a href="mailto:malithchamara1993@gmail.com" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
+                <FaEnvelope className="text-blue-400 mr-2 text-xs sm:text-sm" />
+                <a href="mailto:malithchamara1993@gmail.com" className="text-gray-300 hover:text-white transition-colors duration-300 text-xs sm:text-sm break-all">
                   malithchamara1993@gmail.com
                 </a>
               </motion.div>
@@ -145,9 +145,9 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-6 pt-4 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
             <motion.p
-              className="text-gray-400 text-xs mb-2 md:mb-0"
+              className="text-gray-400 text-[10px] sm:text-xs text-center sm:text-left"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -157,7 +157,7 @@ const Footer = () => {
             </motion.p>
             
             <motion.div
-              className="flex space-x-4 text-xs"
+              className="flex space-x-4 text-[10px] sm:text-xs"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
