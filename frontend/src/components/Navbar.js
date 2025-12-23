@@ -17,7 +17,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white/5 backdrop-blur-md sticky top-0 z-50 supports-[backdrop-filter]:bg-white/5 border-b border-white/10">
+    <nav className="bg-white/90 backdrop-blur-md sticky top-0 z-50 supports-[backdrop-filter]:bg-white/90 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -29,10 +29,10 @@ const Navbar = () => {
                 className="h-16 w-16 sm:h-20 sm:w-20 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 bg-transparent drop-shadow-lg"
               />
               <div className="flex flex-col">
-                <span className="hidden sm:inline text-3xl lg:text-4xl font-extrabold font-serif text-white/95 group-hover:text-blue-300 transition-all duration-300 drop-shadow-lg leading-tight">
+                <span className="hidden sm:inline text-3xl lg:text-4xl font-extrabold font-serif text-black group-hover:text-blue-600 transition-all duration-300 leading-tight">
                   Malith Tours
                 </span>
-                <span className="hidden sm:inline text-xs text-white/70 font-light uppercase tracking-wider">
+                <span className="hidden sm:inline text-xs text-gray-600 font-light uppercase tracking-wider">
                   Sri Lankan Adventures
                 </span>
               </div>
@@ -45,15 +45,15 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative px-4 py-2 rounded-lg text-sm font-semibold text-white/90 transition-all duration-300 ${
+                className={`relative px-4 py-2 rounded-lg text-sm font-semibold text-black transition-all duration-300 ${
                   isActive(item.path)
-                    ? "text-blue-300 bg-white/15"
-                    : "hover:text-blue-300 hover:bg-white/10"
+                    ? "text-blue-600 bg-blue-50"
+                    : "hover:text-blue-600 hover:bg-gray-100"
                 } group`}
               >
                 {item.name}
                 <span
-                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-300 transform ${
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform ${
                     isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   } transition-transform duration-300`}
                 ></span>
@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white/90 hover:text-blue-300 p-2 transition-colors duration-200"
+              className="text-black hover:text-blue-600 p-2 transition-colors duration-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
@@ -79,15 +79,15 @@ const Navbar = () => {
             isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-white/5 backdrop-blur-md rounded-b-xl shadow-lg border-t border-white/10">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-white backdrop-blur-md rounded-b-xl shadow-lg border-t border-gray-200">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block px-4 py-3 rounded-lg text-base font-semibold text-white/90 ${
+                className={`block px-4 py-3 rounded-lg text-base font-semibold text-black ${
                   isActive(item.path)
-                    ? "text-blue-300 bg-white/15"
-                    : "hover:text-blue-300 hover:bg-white/10"
+                    ? "text-blue-600 bg-blue-50"
+                    : "hover:text-blue-600 hover:bg-gray-100"
                 } transition-all duration-200 transform hover:translate-x-2`}
                 onClick={() => setIsOpen(false)}
               >
